@@ -1,0 +1,5 @@
+../Core/Src/gps.c:11:14:nmea_coord_to_deg	32	static
+../Core/Src/gps.c:31:12:gps_read_line	40	static
+../Core/Src/gps.c:73:12:gps_parse_gga	72	static
+../Core/Src/gps.c:144:6:GPS_Init	16	static
+../Core/Src/gps.c:149:5:GPS_ReadFix	280	static

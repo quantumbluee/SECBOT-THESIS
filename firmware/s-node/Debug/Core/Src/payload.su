@@ -1,0 +1,2 @@
+../Core/Src/payload.c:7:6:payload_fill_dummy	24	static
+../Core/Src/payload.c:33:6:payload_fill_from_sensors	24	static
