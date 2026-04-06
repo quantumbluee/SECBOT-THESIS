@@ -57,3 +57,4 @@ typedef struct {
 Documented in ```docs/protocol-spec.md```
 
 # C-Node Vision Pipeline  
+-- TO BE UPDATED

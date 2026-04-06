@@ -39,34 +39,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := secbot
+BUILD_ARTIFACT_NAME := s-node
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-secbot.elf \
+s-node.elf \
 
 MAP_FILES += \
-secbot.map \
+s-node.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-secbot.list \
+s-node.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: secbot.elf secondary-outputs
+main-build: s-node.elf secondary-outputs
 
 # Tool invocations
-secbot.elf secbot.map: $(OBJS) $(USER_OBJS) C:\Users\urvih\STM32CubeIDE\workspace_1.19.0\secbot\STM32F723IEKX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "secbot.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\urvih\STM32CubeIDE\workspace_1.19.0\secbot\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="secbot.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+s-node.elf s-node.map: $(OBJS) $(USER_OBJS) C:\Users\urvih\SECBOT\firmware\s-node\STM32F723IEKX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "s-node.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\s-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="s-node.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -75,14 +75,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-secbot.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "secbot.list"
+s-node.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "s-node.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout secbot.elf secbot.list secbot.map
+	-$(RM) default.size.stdout s-node.elf s-node.list s-node.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

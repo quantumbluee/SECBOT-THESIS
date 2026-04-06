@@ -3,6 +3,7 @@
   ******************************************************************************
   * @file           : main.c
   * @brief          : Main program body
+  * #author         : Urvi Haval
   ******************************************************************************
   * @attention
   *
@@ -34,6 +35,7 @@
 #include "hash.h"
 #include "imu.h"
 #include <stdio.h>
+#include <string.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -135,7 +137,7 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   //GPS Init
-  GPS_Init(&huart2);
+  //GPS_Init(&huart2);
 
   s_node_payload_t payload = {0};
   uint8_t hash[HASH_SHA256_SIZE];
@@ -217,23 +219,45 @@ int main(void)
 
 	  // --openmv uart7 forward to usart2---
 	  uint8_t rx;
-	  HAL_StatusTypeDef ok = HAL_UART_Receive(&huart7, &rx, 1, 10);
+//	  HAL_StatusTypeDef ok = HAL_UART_Receive(&huart7, &rx, 1, 10);
+//
+//	  if(ok==HAL_OK) {
+//		  static char line[128];
+//		  static uint8_t idx = 0;
+//
+//	  if(rx=='\n'){
+//		  line[idx] = '\0';
+//
+//		  printf("OVM says: %s\r\n", line);
+//
+//		  HAL_UART_Transmit(&huart2, (uint8_t*)line, strlen(line), HAL_MAX_DELAY);
+//		  HAL_UART_Transmit(&huart2, (uint8_t*)"\n",1,HAL_MAX_DELAY);
+//		  idx = 0;
+//	  } else if (rx != '\r' && idx < sizeof(line)-1){
+//		  line[idx++] = rx;
+//	  }
 
-	  if(ok==HAL_OK) {
-		  static char line[128];
-		  static uint8_t idx = 0;
 
-	  if(rx=='\n'){
-		  line[idx] = '\0';
-		  printf("OVM says: %s\r\n", line);
-		  idx = 0;
-	  } else if (idx < sizeof(line) - 1){
-		  line[idx++] = rx;
-	  }
+	  char *test_msgs[] = {
+			  "LINE,1,-10,5\r\n",
+			  "LINE,1,0,0\r\n",
+			  "LINE,1,12,-3\r\n"
+	  };
+	  static int i = 0;
+	  HAL_UART_Transmit(&huart4, (uint8_t*)test_msgs[i], strlen(test_msgs[i]),HAL_MAX_DELAY);
+	  printf("Sent to pi: %s", test_msgs[i]);
+
+	  i = (i+1) % 4;
+	  HAL_Delay(500);
+
+
+
+
+
 	  HAL_Delay(1);
 	  }
   }
-}
+
 /**
   * @brief System Clock Configuration
   * @retval None
