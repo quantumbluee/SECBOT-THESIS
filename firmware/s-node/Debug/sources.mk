@@ -25,9 +25,11 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32F7xx_HAL_Driver/Src \
+MBEDTLS/App \
 Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src \
 Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src \
 Middlewares/ST/STM32_USB_Host_Library/Core/Src \
+Middlewares/Third_Party/mbedTLS/library \
 USB_HOST/App \
 USB_HOST/Target \
 

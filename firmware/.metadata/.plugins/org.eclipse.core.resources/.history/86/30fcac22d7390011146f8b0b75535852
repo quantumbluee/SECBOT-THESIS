@@ -1,0 +1,22 @@
+#include "hash.h"
+#include "frame.h"
+#include <string.h>
+#include "main.h"
+
+void HASH_SHA256(const uint8_t *data, uint32_t len, uint8_t out[HASH_SHA256_SIZE]){
+	if(!data || !out){
+		return -1;
+	}
+
+	//placeholder deterministic "hash"
+	//no crypto yet, just so that the framing works
+	uint8_t acc=0;
+	for(uint32_t i=0; i < len; i++){
+		acc ^=data[i];
+		acc = (uint8_t)(acc+ 0x5A);
+	}
+	for(uint32_t i = 0; i < HASH_SHA256_SIZE; i++){
+		out[i] = (uint8_t)(acc + i*3);
+	}
+	return 0;
+}

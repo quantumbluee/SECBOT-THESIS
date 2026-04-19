@@ -13,6 +13,6 @@
  * @param out32 32-byte output buffer
  */
 
-void HASH_SHA256(const uint8_t *data, uint32_t len, uint8_t out[HASH_SHA256_SIZE]);
+int HASH_HMAC_SHA256(const uint8_t *key, uint32_t key_len, const uint8_t *data, uint8_t data_len, uint8_t out[HASH_SHA256_SIZE]);
 
 #endif //HASH_H

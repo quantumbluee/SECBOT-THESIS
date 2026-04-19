@@ -1,86 +1,97 @@
 #include "gps.h"
+#include "main.h"
+
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdio.h>
 
 #define GPS_LINE_MAX 128
 
 static UART_HandleTypeDef *gps_huart = NULL;
 
+/* Uncomment for verbose NMEA debug */
+#define GPS_DEBUG 1
+
 /* Convert NMEA coordinate (ddmm.mmmm or dddmm.mmmm) to signed degrees. */
 static float nmea_coord_to_deg(const char *coord, char hemi)
 {
-    if (coord == NULL || coord[0] == '\0')
+    if (coord == NULL || coord[0] == '\0') {
         return 0.0f;
+    }
 
-    float raw = atof(coord);                 // e.g., 4042.6142
-    if (raw == 0.0f)
+    float raw = atof(coord);
+    if (raw == 0.0f) {
         return 0.0f;
+    }
 
-    float degrees = floorf(raw / 100.0f);    // 40
-    float minutes = raw - degrees * 100.0f;  // 42.6142
-    float deg = degrees + (minutes / 60.0f); // 40 + 42.6142/60
+    float degrees = floorf(raw / 100.0f);
+    float minutes = raw - (degrees * 100.0f);
+    float deg = degrees + (minutes / 60.0f);
 
-    if (hemi == 'S' || hemi == 'W')
+    if (hemi == 'S' || hemi == 'W') {
         deg = -deg;
+    }
 
     return deg;
 }
 
-/* Read one NMEA line (ending in '\n') into buf, NUL-terminated. */
+/* Read one NMEA line ending in '\n', NUL-terminated. */
 static int gps_read_line(char *buf, uint16_t buf_size, uint32_t timeout_ms)
 {
-    if (gps_huart == NULL || buf == NULL || buf_size < 2)
+    if (gps_huart == NULL || buf == NULL || buf_size < 2) {
         return -1;
+    }
 
     uint16_t idx = 0;
     uint32_t start_tick = HAL_GetTick();
 
-    while (1)
+    while ((HAL_GetTick() - start_tick) < timeout_ms)
     {
-        uint8_t c;
-        if (HAL_UART_Receive(gps_huart, &c, 1, 10) != HAL_OK)
-        {
-            // check global timeout
-            if ((HAL_GetTick() - start_tick) > timeout_ms)
-                return -1;
+        uint8_t c = 0;
+        HAL_StatusTypeDef rc = HAL_UART_Receive(gps_huart, &c, 1, 10);
+
+        if (rc != HAL_OK) {
             continue;
         }
 
-        if (c == '\r')
+        if (c == '\r') {
             continue;
+        }
 
         if (c == '\n')
         {
-            if (idx == 0)
-                continue; // skip empty lines
+            if (idx == 0) {
+                continue; /* skip empty lines */
+            }
 
             buf[idx] = '\0';
-            return 0;     // success
+            return 0;
         }
 
-        if (idx < buf_size - 1)
-        {
+        if (idx < (buf_size - 1)) {
             buf[idx++] = (char)c;
         }
-
-        if ((HAL_GetTick() - start_tick) > timeout_ms)
-            return -1;
     }
+
+    return -1;
 }
 
 /* Parse a GGA or GNGGA sentence and fill gps_fix_t. */
 static int gps_parse_gga(char *line, gps_fix_t *fix)
 {
-    // Accept $GPGGA or $GNGGA
-    if (strncmp(line, "$GPGGA", 6) != 0 &&
-        strncmp(line, "$GNGGA", 6) != 0)
+    if (line == NULL || fix == NULL) {
+        return -1;
+    }
+
+    /* Accept $GPGGA or $GNGGA */
+    if ((strncmp(line, "$GPGGA", 6) != 0) &&
+        (strncmp(line, "$GNGGA", 6) != 0))
     {
         return -1;
     }
 
-    // Tokenize
-    char *token;
+    char *token = NULL;
     int field = 0;
 
     char lat_str[16] = {0};
@@ -96,47 +107,57 @@ static int gps_parse_gga(char *line, gps_fix_t *fix)
     {
         switch (field)
         {
-        case 2: // latitude
-            if (token[0] != '\0')
-                strncpy(lat_str, token, sizeof(lat_str) - 1);
-            break;
-        case 3: // N/S
-            if (token[0] != '\0')
-                lat_hemi = token[0];
-            break;
-        case 4: // longitude
-            if (token[0] != '\0')
-                strncpy(lon_str, token, sizeof(lon_str) - 1);
-            break;
-        case 5: // E/W
-            if (token[0] != '\0')
-                lon_hemi = token[0];
-            break;
-        case 6: // fix quality (0=no fix)
-            fix_quality = atoi(token);
-            break;
-        case 7: // number of satellites
-            num_sats = atoi(token);
-            break;
-        case 9: // altitude in meters
-            altitude = (float)atof(token);
-            break;
-        default:
-            break;
+            case 2: /* latitude */
+                if (token[0] != '\0') {
+                    strncpy(lat_str, token, sizeof(lat_str) - 1);
+                    lat_str[sizeof(lat_str) - 1] = '\0';
+                }
+                break;
+
+            case 3: /* N/S */
+                if (token[0] != '\0') {
+                    lat_hemi = token[0];
+                }
+                break;
+
+            case 4: /* longitude */
+                if (token[0] != '\0') {
+                    strncpy(lon_str, token, sizeof(lon_str) - 1);
+                    lon_str[sizeof(lon_str) - 1] = '\0';
+                }
+                break;
+
+            case 5: /* E/W */
+                if (token[0] != '\0') {
+                    lon_hemi = token[0];
+                }
+                break;
+
+            case 6: /* fix quality */
+                fix_quality = atoi(token);
+                break;
+
+            case 7: /* number of satellites */
+                num_sats = atoi(token);
+                break;
+
+            case 9: /* altitude in meters */
+                altitude = (float)atof(token);
+                break;
+
+            default:
+                break;
         }
 
         token = strtok(NULL, ",");
         field++;
     }
 
-    if (fix == NULL)
-        return -1;
-
     fix->latitude_deg  = nmea_coord_to_deg(lat_str, lat_hemi);
     fix->longitude_deg = nmea_coord_to_deg(lon_str, lon_hemi);
     fix->altitude_m    = altitude;
     fix->num_sats      = (uint8_t)num_sats;
-    fix->fix_valid     = (fix_quality > 0) ? 1 : 0;
+    fix->fix_valid     = (fix_quality > 0U) ? 1U : 0U;
 
     return 0;
 }
@@ -148,30 +169,41 @@ void GPS_Init(UART_HandleTypeDef *huart)
 
 int GPS_ReadFix(gps_fix_t *fix, uint32_t timeout_ms)
 {
-    if (gps_huart == NULL || fix == NULL)
+    if (gps_huart == NULL || fix == NULL) {
         return -1;
+    }
 
     uint32_t start = HAL_GetTick();
-
     char line[GPS_LINE_MAX];
 
     while ((HAL_GetTick() - start) < timeout_ms)
     {
-        if (gps_read_line(line, sizeof(line), timeout_ms) != 0)
-            return -1; // timeout or UART error
-        printf("NMEA: %s\r\n", line);
+        /* Use a short per-line timeout so outer loop controls total timeout */
+        if (gps_read_line(line, sizeof(line), 100) != 0) {
+            continue;
+        }
 
-        // Make a working copy since gps_parse_gga uses strtok
+#ifdef GPS_DEBUG
+        printf("NMEA: %s\r\n", line);
+#endif
+
         char work[GPS_LINE_MAX];
         strncpy(work, line, sizeof(work) - 1);
         work[sizeof(work) - 1] = '\0';
 
         if (gps_parse_gga(work, fix) == 0)
         {
-            // We got a GGA sentence; return even if fix_valid = 0
+#ifdef GPS_DEBUG
+            printf("GPS parsed: valid=%d lat=%.6f lon=%.6f alt=%.2f sats=%d\r\n",
+                   fix->fix_valid,
+                   fix->latitude_deg,
+                   fix->longitude_deg,
+                   fix->altitude_m,
+                   fix->num_sats);
+#endif
             return 0;
         }
     }
 
-    return -2; // no valid GGA in time window
+    return -2; /* no GGA sentence found in time window */
 }

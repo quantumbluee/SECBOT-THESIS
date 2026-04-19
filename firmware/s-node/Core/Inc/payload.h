@@ -5,35 +5,36 @@
 #include "imu.h"
 #include "gps.h"
 
+#pragma pack(push, 1)
 typedef struct {
-	uint32_t timestamp_ms;
+    uint32_t timestamp_ms;
 
-	//IMU
-	float accel_x;
-	float accel_y;
-	float accel_z;
-	float gyro_x;
-	float gyro_y;
-	float gyro_z;
+    // GPS
+    uint8_t  gps_valid;
+    int32_t  latitude_e7;
+    int32_t  longitude_e7;
+    int32_t  altitude_mm;
+    uint8_t  num_sats;
 
-	//GPS
-	float latitude;
-	float longitude;
-	float altitude;
+    // IMU
+    uint8_t  imu_valid;
+    int16_t  accel_x_mg;
+    int16_t  accel_y_mg;
+    int16_t  accel_z_mg;
+    int16_t  gyro_x_centi_dps;
+    int16_t  gyro_y_centi_dps;
+    int16_t  gyro_z_centi_dps;
+    int16_t  temp_centi_c;
 
-	//OpenMV
-	uint16_t img_size;
-	uint8_t img_data[256];
-}s_node_payload_t;
+    // OpenMV summary
+    uint8_t  vision_valid;
+    int16_t  line_error;
+    uint8_t  obstacle_flag;
+    uint8_t  vision_confidence;
+} s_node_payload_t;
+#pragma pack(pop)
 
-/**
- * @brief Fill payload with dummy values (for testing without sensors)
- */
-void payload_fill_dummy(s_node_payload_t*p);
-
-/**
- * @brief Fill payload from real sensor readings (GPS + IMU)
- */
+void payload_fill_dummy(s_node_payload_t *p);
 void payload_fill_from_sensors(s_node_payload_t *p, const gps_fix_t *gps, const imu_data_t *imu);
 
-#endif //PAYLOAD_H
+#endif

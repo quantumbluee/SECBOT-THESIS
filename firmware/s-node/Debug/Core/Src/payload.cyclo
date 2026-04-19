@@ -1,2 +1,7 @@
-../Core/Src/payload.c:7:6:payload_fill_dummy	3
-../Core/Src/payload.c:33:6:payload_fill_from_sensors	5
+../Core/Src/payload.c:7:16:deg_to_e7	1
+../Core/Src/payload.c:12:16:meters_to_mm	1
+../Core/Src/payload.c:17:16:g_to_mg	3
+../Core/Src/payload.c:25:16:dps_to_centi_dps	3
+../Core/Src/payload.c:33:16:c_to_centi_c	3
+../Core/Src/payload.c:43:6:payload_fill_dummy	2
+../Core/Src/payload.c:75:6:payload_fill_from_sensors	5

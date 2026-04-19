@@ -63,6 +63,8 @@
 gps_fix_t g_gps_fix;
 imu_data_t g_imu;
 uint8_t g_imu_whoami = 0;
+
+static const uint8_t HMAC_KEY[] = "roborebound-demo-key";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -137,7 +139,7 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   //GPS Init
-  //GPS_Init(&huart2);
+  GPS_Init(&huart7);
 
   s_node_payload_t payload = {0};
   uint8_t hash[HASH_SHA256_SIZE];
@@ -161,103 +163,59 @@ int main(void)
   else{
 	  printf("IMU Init okay\r\n");
   }
+
+  printf("sizeof(payload) = %u\r\n", (unsigned)sizeof(payload));
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-//    /* USER CODE END WHILE */
-//    MX_USB_HOST_Process();
-//    /*---READ IMU----*/
-//    imu_data_t imu = {0};
-//    int imu_rc = IMU_Read(&imu);
-//
-//    if(imu_rc!=0){
-//    	printf("IMU read error: %d\r\n", imu_rc); //will still fill up the frame with zeros
-//    }
-//
-//    /*--Read GPS (2s timeout)-----*/
-//    gps_fix_t fix = {0};
-//    int gps_rc = GPS_ReadFix(&fix, 2000);
-//    if(gps_rc!=0){
-//    	printf("GPS read error: %d\r\n", gps_rc);
-//    }else{
-//    	if(fix.fix_valid){
-//    		printf("GPS FIX sats=%d lat=%.6f lon=%.6f alt=%.2f\r\n",
-//    				fix.num_sats, fix.latitude_deg, fix.longitude_deg, fix.altitude_m);
-//    	}else{
-//    		printf("GPS not fixed sats=%d lat=%.6f lon=%.6f alt=%.2f\r\n",
-//    				fix.num_sats, fix.latitude_deg, fix.longitude_deg, fix.altitude_m);
-//    	}
-//    }
-//
-//    /*-------BUilding payload from sensors*/
-//    payload_fill_from_sensors(&payload, &fix, &imu);
-//
-//    /*-----Compute hash over p[payload*/
-//    if(HASH_SHA256((uint8_t*)&payload, sizeof(payload), hash)!=0){
-//    	printf("HASH_SHA256 failed\r\n");
-//    	HAL_Delay(500);
-//    	continue;
-//    }
-//
-//    /*----Build frame*/
-//    int frame_len = frame_build(frame_buf, sizeof(frame_buf), (uint8_t*)&payload, sizeof(payload), hash);
-//    if (frame_len < 0){
-//    	printf("frame build error: %d\r\n", frame_len);
-//    	HAL_Delay(500);
-//    	continue;
-//    }
-//
-//    /*DEBUG----------*/
-//    printf("Frame built: len = %d bytes \r\n", frame_len);
-//    printf("Frame[0....15]: ");
-//    for(int i = 0; i < frame_len && i < 16; i++){
-//    	printf("%02X", frame_buf[i]);
-//    }
-//    printf("\r\n\------------\r\n");
-//    HAL_Delay(1000);
-	  MX_USB_HOST_Process();
+      MX_USB_HOST_Process();
 
-	  // --openmv uart7 forward to usart2---
-	  uint8_t rx;
-//	  HAL_StatusTypeDef ok = HAL_UART_Receive(&huart7, &rx, 1, 10);
-//
-//	  if(ok==HAL_OK) {
-//		  static char line[128];
-//		  static uint8_t idx = 0;
-//
-//	  if(rx=='\n'){
-//		  line[idx] = '\0';
-//
-//		  printf("OVM says: %s\r\n", line);
-//
-//		  HAL_UART_Transmit(&huart2, (uint8_t*)line, strlen(line), HAL_MAX_DELAY);
-//		  HAL_UART_Transmit(&huart2, (uint8_t*)"\n",1,HAL_MAX_DELAY);
-//		  idx = 0;
-//	  } else if (rx != '\r' && idx < sizeof(line)-1){
-//		  line[idx++] = rx;
-//	  }
+      imu_data_t imu = {0};
+      gps_fix_t fix = {0};
 
+      int imu_rc = IMU_Read(&imu);
+      int gps_rc = GPS_ReadFix(&fix, 500);
 
-	  char *test_msgs[] = {
-			  "LINE,1,-10,5\r\n",
-			  "LINE,1,0,0\r\n",
-			  "LINE,1,12,-3\r\n"
-	  };
-	  static int i = 0;
-	  HAL_UART_Transmit(&huart4, (uint8_t*)test_msgs[i], strlen(test_msgs[i]),HAL_MAX_DELAY);
-	  printf("Sent to pi: %s", test_msgs[i]);
+      if (imu_rc != 0){
+    	  printf("IMU read error: %d\r\n", imu_rc);
+    	  HAL_Delay(200);
+    	  continue;
+      }
 
-	  i = (i+1) % 4;
-	  HAL_Delay(500);
+      payload_fill_from_sensors(&payload,
+    		  (gps_rc==0) ? &fix: NULL, (imu_rc==0) ? &imu: NULL);
 
+      //HMAC
+      if (HASH_HMAC_SHA256(HMAC_KEY, sizeof(HMAC_KEY)-1, (const uint8_t*)&payload, sizeof(payload), hash)!=0){
+    	  printf("HMAC_SHA256 failed\r\n");
+    	  HAL_Delay(500);
+    	  continue;
+      }
 
+      int frame_len = frame_build(frame_buf,
+                                  sizeof(frame_buf),
+                                  (uint8_t*)&payload,
+                                  sizeof(payload),
+                                  hash);
 
+      if (frame_len < 0) {
+          printf("frame build error: %d\r\n", frame_len);
+          HAL_Delay(500);
+          continue;
+      }
 
+      HAL_UART_Transmit(&huart4, frame_buf, frame_len, HAL_MAX_DELAY);
+      printf("Sent frame to Pi: len = %d |"
+    		  "Ax=%.3f Ay=%.3f Az=%.3f |"
+    		  "Gx=%.3f Gy=%.3f Gz=%.3f |"
+    		  "T=%.2f C\r\n",
+			  frame_len, imu.accel_x, imu.accel_y, imu.accel_z,
+			  imu.gyro_x, imu.gyro_y, imu.gyro_z,
+			  imu.temp_c);
 
-	  HAL_Delay(1);
-	  }
+      HAL_Delay(200);
   }
-
+}
 /**
   * @brief System Clock Configuration
   * @retval None

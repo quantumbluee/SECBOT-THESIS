@@ -3,4 +3,4 @@
 ../Core/Src/imu.c:58:12:select_bank	1
 ../Core/Src/imu.c:64:5:IMU_WhoAmI	4
 ../Core/Src/imu.c:71:5:IMU_Init	15
-../Core/Src/imu.c:142:5:IMU_Read	6
+../Core/Src/imu.c:142:5:IMU_Read	5

@@ -1,5 +1,5 @@
-../Core/Src/gps.c:11:14:nmea_coord_to_deg	6
-../Core/Src/gps.c:31:12:gps_read_line	11
-../Core/Src/gps.c:73:12:gps_parse_gga	16
-../Core/Src/gps.c:144:6:GPS_Init	1
-../Core/Src/gps.c:149:5:GPS_ReadFix	6
+../Core/Src/gps.c:17:14:nmea_coord_to_deg	6
+../Core/Src/gps.c:40:12:gps_read_line	10
+../Core/Src/gps.c:81:12:gps_parse_gga	18
+../Core/Src/gps.c:165:6:GPS_Init	1
+../Core/Src/gps.c:170:5:GPS_ReadFix	6

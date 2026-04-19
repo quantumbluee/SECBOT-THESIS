@@ -1,0 +1,195 @@
+2026-04-16 10:34:23,313 [INFO] WebApp:194 - Connection lost
+2026-04-16 10:34:24,088 [INFO] WebApp:191 - Connection restablished
+2026-04-16 13:52:42,902 [INFO] WebApp:194 - Connection lost
+2026-04-16 13:52:43,258 [INFO] WebApp:191 - Connection restablished
+2026-04-16 13:52:43,775 [INFO] WebApp:194 - Connection lost
+2026-04-16 13:52:43,990 [INFO] WebApp:191 - Connection restablished
+2026-04-16 14:38:22,037 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:43:19,921 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:43:28,405 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:43:31,947 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:43:35,013 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:19,996 [INFO] I2cTimingTraitement:330 - 0x6000030D
+2026-04-16 14:44:20,018 [INFO] I2cTimingTraitement:330 - 0x6000030D
+2026-04-16 14:44:20,035 [INFO] I2cTimingTraitement:330 - 0x6000030D
+2026-04-16 14:44:20,815 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:20,817 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:20,880 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:20,881 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:20,887 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:20,889 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:21,687 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:21,688 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:21,730 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:21,731 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:21,737 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:21,738 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:22,597 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:22,598 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:22,644 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:22,645 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:22,655 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:22,656 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:23,895 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:23,896 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:23,938 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:23,939 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:23,947 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:23,947 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:24,786 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:24,787 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:24,828 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:24,829 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:24,836 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:44:24,837 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:46:55,638 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 825492648 Bytes (1073741824)
+2026-04-16 14:46:57,142 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2026-04-16 14:46:57,142 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2026-04-16 14:46:57,143 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_HS
+2026-04-16 14:46:57,144 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8F7
+2026-04-16 14:46:57,144 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8F7
+2026-04-16 14:46:57,145 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8F7
+2026-04-16 14:46:57,145 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2026-04-16 14:46:57,145 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2026-04-16 14:46:57,145 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2026-04-16 14:46:57,145 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2026-04-16 14:46:57,146 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2026-04-16 14:46:57,146 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2026-04-16 14:46:57,146 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2026-04-16 14:46:57,147 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2026-04-16 14:46:57,147 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2026-04-16 14:46:57,147 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2026-04-16 14:46:57,147 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_HOST
+2026-04-16 14:46:57,147 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2026-04-16 14:46:57,147 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2026-04-16 14:46:57,148 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8F7
+2026-04-16 14:46:57,148 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: FMC
+2026-04-16 14:46:57,148 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: UART
+2026-04-16 14:46:57,148 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8F7
+2026-04-16 14:46:57,148 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: UART
+2026-04-16 14:46:57,148 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: UART
+2026-04-16 14:46:57,150 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2026-04-16 14:46:57,151 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SAI
+2026-04-16 14:46:57,151 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: QUADSPI
+2026-04-16 14:46:57,154 [INFO] CodeGenerator:892 - code generatio: config db path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\
+2026-04-16 14:46:57,378 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:46:57,381 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:46:57,383 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-16 14:46:57,901 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\license.tmp_save
+2026-04-16 14:46:58,650 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\license.tmp
+2026-04-16 14:46:59,699 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\gpio.c_save
+2026-04-16 14:47:00,107 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\gpio.c
+2026-04-16 14:47:00,132 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\gpio.h_save
+2026-04-16 14:47:00,306 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\gpio.h
+2026-04-16 14:47:01,680 [WARN] IPConfigManager:3238 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2026-04-16 14:47:02,397 [WARN] IPConfigManager:3238 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2026-04-16 14:47:02,422 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_hs_vars.tmp_save
+2026-04-16 14:47:02,552 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_hs_vars.tmp
+2026-04-16 14:47:02,565 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_hs_inc.tmp_save
+2026-04-16 14:47:02,677 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_hs_inc.tmp
+2026-04-16 14:47:02,692 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_hs_HalInit.tmp_save
+2026-04-16 14:47:02,901 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_hs_HalInit.tmp
+2026-04-16 14:47:02,915 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_hs_Msp.tmp_save
+2026-04-16 14:47:03,166 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_hs_Msp.tmp
+2026-04-16 14:47:04,049 [WARN] IPConfigManager:3238 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2026-04-16 14:47:04,487 [WARN] IPConfigManager:3238 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2026-04-16 14:47:04,509 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2026-04-16 14:47:04,612 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_fs_vars.tmp
+2026-04-16 14:47:04,621 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2026-04-16 14:47:04,711 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_fs_inc.tmp
+2026-04-16 14:47:04,722 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2026-04-16 14:47:04,869 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2026-04-16 14:47:04,886 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2026-04-16 14:47:05,083 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\usb_otg_fs_Msp.tmp
+2026-04-16 14:47:17,002 [WARN] IPConfigManager:3238 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2026-04-16 14:47:17,420 [WARN] IPConfigManager:3238 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2026-04-16 14:47:17,566 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\adc.c_save
+2026-04-16 14:47:18,365 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\adc.c
+2026-04-16 14:47:18,390 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\adc.h_save
+2026-04-16 14:47:18,561 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\adc.h
+2026-04-16 14:47:18,596 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\cortex.tmp_save
+2026-04-16 14:47:18,772 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\cortex.tmp
+2026-04-16 14:47:18,808 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\fmc.c_save
+2026-04-16 14:47:19,045 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\fmc.c
+2026-04-16 14:47:19,107 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\fmc.h_save
+2026-04-16 14:47:19,462 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\fmc.h
+2026-04-16 14:47:19,538 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\i2c.c_save
+2026-04-16 14:47:19,877 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\i2c.c
+2026-04-16 14:47:19,900 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\i2c.h_save
+2026-04-16 14:47:20,062 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\i2c.h
+2026-04-16 14:47:20,103 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\quadspi.c_save
+2026-04-16 14:47:20,349 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\quadspi.c
+2026-04-16 14:47:20,369 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\quadspi.h_save
+2026-04-16 14:47:20,540 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\quadspi.h
+2026-04-16 14:47:20,589 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\sai.c_save
+2026-04-16 14:47:20,798 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\sai.c
+2026-04-16 14:47:20,848 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\sai.h_save
+2026-04-16 14:47:21,078 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\sai.h
+2026-04-16 14:47:21,122 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\spi.c_save
+2026-04-16 14:47:21,336 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\spi.c
+2026-04-16 14:47:21,355 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\spi.h_save
+2026-04-16 14:47:21,470 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\spi.h
+2026-04-16 14:47:21,503 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\tim.c_save
+2026-04-16 14:47:21,721 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\tim.c
+2026-04-16 14:47:21,735 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\tim.h_save
+2026-04-16 14:47:21,845 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\tim.h
+2026-04-16 14:47:21,879 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\usart.c_save
+2026-04-16 14:47:22,110 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\usart.c
+2026-04-16 14:47:22,132 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\usart.h_save
+2026-04-16 14:47:22,309 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\usart.h
+2026-04-16 14:47:22,420 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\App\usb_host.c_save
+2026-04-16 14:47:22,594 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\App\usb_host.c
+2026-04-16 14:47:22,610 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\App\usb_host.h_save
+2026-04-16 14:47:22,724 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\App\usb_host.h
+2026-04-16 14:47:22,740 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\Target\usbh_conf.h_save
+2026-04-16 14:47:22,869 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\Target\usbh_conf.h
+2026-04-16 14:47:22,887 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\Target\usbh_conf.c_save
+2026-04-16 14:47:23,024 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\Target\usbh_conf.c
+2026-04-16 14:47:23,045 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\Target\usbh_platform.c_save
+2026-04-16 14:47:23,189 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\Target\usbh_platform.c
+2026-04-16 14:47:23,207 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\Target\usbh_platform.h_save
+2026-04-16 14:47:23,342 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\USB_HOST\Target\usbh_platform.h
+2026-04-16 14:47:23,389 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\stm32f7xx_it.c_save
+2026-04-16 14:47:23,614 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\stm32f7xx_it.c
+2026-04-16 14:47:23,632 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\stm32f7xx_it.h_save
+2026-04-16 14:47:23,769 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\stm32f7xx_it.h
+2026-04-16 14:47:23,821 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\stm32f7xx_hal_msp.c_save
+2026-04-16 14:47:23,984 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\stm32f7xx_hal_msp.c
+2026-04-16 14:47:23,996 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\system.tmp_save
+2026-04-16 14:47:24,103 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\MXTmpFiles\system.tmp
+2026-04-16 14:47:24,144 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\stm32f7xx_hal_conf.h_save
+2026-04-16 14:47:24,306 [INFO] CodeEngine:345 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\stm32f7xx_hal_conf.h
+2026-04-16 14:47:24,409 [INFO] ApiDbMcu:532 - Load IP Config File for ADC1
+2026-04-16 14:47:24,414 [INFO] ApiDbMcu:532 - Load IP Config File for ADC2
+2026-04-16 14:47:24,420 [INFO] ApiDbMcu:532 - Load IP Config File for ADC3
+2026-04-16 14:47:24,435 [INFO] ApiDbMcu:532 - Load IP Config File for FMC
+2026-04-16 14:47:24,442 [INFO] ApiDbMcu:532 - Load IP Config File for I2C1
+2026-04-16 14:47:24,447 [INFO] ApiDbMcu:532 - Load IP Config File for I2C2
+2026-04-16 14:47:24,454 [INFO] ApiDbMcu:532 - Load IP Config File for I2C3
+2026-04-16 14:47:24,457 [INFO] ApiDbMcu:532 - Load IP Config File for QUADSPI
+2026-04-16 14:47:24,464 [INFO] ApiDbMcu:532 - Load IP Config File for SAI2
+2026-04-16 14:47:24,470 [INFO] ApiDbMcu:532 - Load IP Config File for SPI1
+2026-04-16 14:47:24,474 [INFO] ApiDbMcu:532 - Load IP Config File for SPI2
+2026-04-16 14:47:24,499 [INFO] ApiDbMcu:532 - Load IP Config File for TIM2
+2026-04-16 14:47:24,520 [INFO] ApiDbMcu:532 - Load IP Config File for TIM3
+2026-04-16 14:47:24,541 [INFO] ApiDbMcu:532 - Load IP Config File for TIM5
+2026-04-16 14:47:24,569 [INFO] ApiDbMcu:532 - Load IP Config File for TIM9
+2026-04-16 14:47:24,593 [INFO] ApiDbMcu:532 - Load IP Config File for TIM12
+2026-04-16 14:47:24,602 [INFO] ApiDbMcu:532 - Load IP Config File for UART4
+2026-04-16 14:47:24,609 [INFO] ApiDbMcu:532 - Load IP Config File for UART5
+2026-04-16 14:47:24,617 [INFO] ApiDbMcu:532 - Load IP Config File for UART7
+2026-04-16 14:47:24,625 [INFO] ApiDbMcu:532 - Load IP Config File for USART2
+2026-04-16 14:47:24,631 [INFO] ApiDbMcu:532 - Load IP Config File for USART6
+2026-04-16 14:47:24,639 [INFO] ApiDbMcu:532 - Load IP Config File for RCC
+2026-04-16 14:47:24,685 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\main.h_save
+2026-04-16 14:47:24,928 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Inc\main.h
+2026-04-16 14:47:24,950 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\main.c_save
+2026-04-16 14:47:25,246 [INFO] CodeEngine:289 - Generated code: C:\Users\urvih\SECBOT\firmware\s-node\Core\Src\main.c
+2026-04-16 14:47:27,183 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 974mS.
+2026-04-16 14:47:27,227 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2026-04-16 14:47:27,495 [INFO] ConfigFileManager:1595 - The Die is : DIE452
+2026-04-16 14:47:27,503 [INFO] ApiDbMcu:532 - Load IP Config File for FATFS
+2026-04-16 14:47:27,511 [INFO] ApiDbMcu:532 - Load IP Config File for FREERTOS
+2026-04-16 14:47:27,517 [INFO] ApiDbMcu:532 - Load IP Config File for LIBJPEG
+2026-04-16 14:47:27,532 [INFO] ApiDbMcu:532 - Load IP Config File for MBEDTLS
+2026-04-16 14:47:27,552 [INFO] ApiDbMcu:532 - Load IP Config File for USB_DEVICE

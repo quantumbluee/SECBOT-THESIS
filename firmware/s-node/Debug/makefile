@@ -11,9 +11,11 @@ RM := rm -rf
 -include sources.mk
 -include USB_HOST/Target/subdir.mk
 -include USB_HOST/App/subdir.mk
+-include Middlewares/Third_Party/mbedTLS/library/subdir.mk
 -include Middlewares/ST/STM32_USB_Host_Library/Core/Src/subdir.mk
 -include Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/subdir.mk
 -include Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/subdir.mk
+-include MBEDTLS/App/subdir.mk
 -include Drivers/STM32F7xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
