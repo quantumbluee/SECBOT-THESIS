@@ -1,0 +1,110 @@
+#include "payload.h"
+#include "main.h"
+#include <string.h>
+
+// ---------- Conversion helpers ----------
+
+static int32_t deg_to_e7(float deg)
+{
+    return (int32_t)(deg * 10000000.0f);
+}
+
+static int32_t meters_to_mm(float m)
+{
+    return (int32_t)(m * 1000.0f);
+}
+
+static int16_t g_to_mg(float g)
+{
+    float x = g * 1000.0f;
+    if (x > 32767.0f)  x = 32767.0f;
+    if (x < -32768.0f) x = -32768.0f;
+    return (int16_t)x;
+}
+
+static int16_t dps_to_centi_dps(float dps)
+{
+    float x = dps * 100.0f;
+    if (x > 32767.0f)  x = 32767.0f;
+    if (x < -32768.0f) x = -32768.0f;
+    return (int16_t)x;
+}
+
+static int16_t c_to_centi_c(float c)
+{
+    float x = c * 100.0f;
+    if (x > 32767.0f)  x = 32767.0f;
+    if (x < -32768.0f) x = -32768.0f;
+    return (int16_t)x;
+}
+
+// ---------- Public API ----------
+
+void payload_fill_dummy(s_node_payload_t *p)
+{
+    if (!p) return;
+
+    memset(p, 0, sizeof(*p));
+
+    p->timestamp_ms = HAL_GetTick();
+
+    // Dummy GPS
+    p->gps_valid    = 1;
+    p->latitude_e7  = 400000000;   // 40.0000000
+    p->longitude_e7 = -750000000;  // -75.0000000
+    p->altitude_mm  = 12300;       // 12.3 m
+    p->num_sats     = 7;
+
+    // Dummy IMU
+    p->imu_valid        = 1;
+    p->accel_x_mg       = 100;     // 0.100 g
+    p->accel_y_mg       = 200;     // 0.200 g
+    p->accel_z_mg       = 1000;    // 1.000 g
+    p->gyro_x_centi_dps = 110;     // 1.10 dps
+    p->gyro_y_centi_dps = 120;     // 1.20 dps
+    p->gyro_z_centi_dps = 130;     // 1.30 dps
+    p->temp_centi_c     = 2500;    // 25.00 C
+
+    // Dummy vision summary
+    p->vision_valid      = 1;
+    p->line_error        = -10;
+    p->obstacle_flag     = 0;
+    p->vision_confidence = 90;
+}
+
+void payload_fill_from_sensors(s_node_payload_t *p,
+                               const gps_fix_t *gps,
+                               const imu_data_t *imu)
+{
+    if (!p) return;
+
+    memset(p, 0, sizeof(*p));
+    p->timestamp_ms = HAL_GetTick();
+
+    // IMU
+    if (imu) {
+        p->imu_valid        = 1;
+        p->accel_x_mg       = g_to_mg(imu->accel_x);
+        p->accel_y_mg       = g_to_mg(imu->accel_y);
+        p->accel_z_mg       = g_to_mg(imu->accel_z);
+        p->gyro_x_centi_dps = dps_to_centi_dps(imu->gyro_x);
+        p->gyro_y_centi_dps = dps_to_centi_dps(imu->gyro_y);
+        p->gyro_z_centi_dps = dps_to_centi_dps(imu->gyro_z);
+        p->temp_centi_c     = c_to_centi_c(imu->temp_c);
+    }
+
+    // GPS
+    if (gps && gps->fix_valid) {
+        p->gps_valid    = 1;
+        p->latitude_e7  = deg_to_e7(gps->latitude_deg);
+        p->longitude_e7 = deg_to_e7(gps->longitude_deg);
+        p->altitude_mm  = meters_to_mm(gps->altitude_m);
+        p->num_sats     = gps->num_sats;
+    }
+
+    // OpenMV placeholder for now
+    p->vision_valid      = 0;
+    p->line_error        = 0;
+    p->obstacle_flag     = 0;
+    p->vision_confidence = 0;
+}

@@ -19,6 +19,7 @@
 "./Core/Src/system_stm32f7xx.o"
 "./Core/Src/tim.o"
 "./Core/Src/usart.o"
+"./Core/Src/vision.o"
 "./Core/Startup/startup_stm32f723iekx.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o"

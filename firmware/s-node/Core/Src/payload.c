@@ -50,20 +50,20 @@ void payload_fill_dummy(s_node_payload_t *p)
 
     // Dummy GPS
     p->gps_valid    = 1;
-    p->latitude_e7  = 400000000;   // 40.0000000
-    p->longitude_e7 = -750000000;  // -75.0000000
-    p->altitude_mm  = 12300;       // 12.3 m
+    p->latitude_e7  = 400000000;
+    p->longitude_e7 = -750000000;
+    p->altitude_mm  = 12300;
     p->num_sats     = 7;
 
     // Dummy IMU
     p->imu_valid        = 1;
-    p->accel_x_mg       = 100;     // 0.100 g
-    p->accel_y_mg       = 200;     // 0.200 g
-    p->accel_z_mg       = 1000;    // 1.000 g
-    p->gyro_x_centi_dps = 110;     // 1.10 dps
-    p->gyro_y_centi_dps = 120;     // 1.20 dps
-    p->gyro_z_centi_dps = 130;     // 1.30 dps
-    p->temp_centi_c     = 2500;    // 25.00 C
+    p->accel_x_mg       = 100;
+    p->accel_y_mg       = 200;
+    p->accel_z_mg       = 1000;
+    p->gyro_x_centi_dps = 110;
+    p->gyro_y_centi_dps = 120;
+    p->gyro_z_centi_dps = 130;
+    p->temp_centi_c     = 2500;
 
     // Dummy vision summary
     p->vision_valid      = 1;
@@ -74,7 +74,8 @@ void payload_fill_dummy(s_node_payload_t *p)
 
 void payload_fill_from_sensors(s_node_payload_t *p,
                                const gps_fix_t *gps,
-                               const imu_data_t *imu)
+                               const imu_data_t *imu,
+                               const vision_data_t *vision)
 {
     if (!p) return;
 
@@ -102,9 +103,11 @@ void payload_fill_from_sensors(s_node_payload_t *p,
         p->num_sats     = gps->num_sats;
     }
 
-    // OpenMV placeholder for now
-    p->vision_valid      = 0;
-    p->line_error        = 0;
-    p->obstacle_flag     = 0;
-    p->vision_confidence = 0;
+    // Vision
+    if (vision && vision->valid) {
+        p->vision_valid      = 1;
+        p->line_error        = vision->line_error;
+        p->obstacle_flag     = vision->obstacle_flag;
+        p->vision_confidence = vision->confidence;
+    }
 }

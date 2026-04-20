@@ -34,6 +34,7 @@
 #include "frame.h"
 #include "hash.h"
 #include "imu.h"
+#include "vision.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -166,15 +167,27 @@ int main(void)
 
   printf("sizeof(payload) = %u\r\n", (unsigned)sizeof(payload));
   /* USER CODE BEGIN WHILE */
+
+
   while (1)
   {
       MX_USB_HOST_Process();
 
       imu_data_t imu = {0};
       gps_fix_t fix = {0};
+      vision_data_t vision = {0};
 
       int imu_rc = IMU_Read(&imu);
-      int gps_rc = GPS_ReadFix(&fix, 500);
+      int gps_rc = GPS_ReadFix(&fix, 100);
+
+      char ovm_line[64];
+      if(vision_read_line(&huart2, ovm_line, sizeof(ovm_line), 50)==0){
+    	  if(vision_parse_line(ovm_line, &vision)==0){
+    		  printf("OpenMV:%s\r\n", ovm_line);
+    	  } else {
+    		  printf("OpenMV parse fail: %s\r\n", ovm_line);
+    	  }
+      }
 
       if (imu_rc != 0){
     	  printf("IMU read error: %d\r\n", imu_rc);
@@ -183,7 +196,9 @@ int main(void)
       }
 
       payload_fill_from_sensors(&payload,
-    		  (gps_rc==0) ? &fix: NULL, (imu_rc==0) ? &imu: NULL);
+    		  (gps_rc==0) ? &fix: NULL,
+    				  (imu_rc==0) ? &imu: NULL,
+    						  vision.valid ? &vision : NULL);
 
       //HMAC
       if (HASH_HMAC_SHA256(HMAC_KEY, sizeof(HMAC_KEY)-1, (const uint8_t*)&payload, sizeof(payload), hash)!=0){
@@ -208,10 +223,15 @@ int main(void)
       printf("Sent frame to Pi: len = %d |"
     		  "Ax=%.3f Ay=%.3f Az=%.3f |"
     		  "Gx=%.3f Gy=%.3f Gz=%.3f |"
-    		  "T=%.2f C\r\n",
+    		  "T=%.2f C |"
+    		  "vis=%d line =%d obs=%d conf=%d\r\n",
 			  frame_len, imu.accel_x, imu.accel_y, imu.accel_z,
 			  imu.gyro_x, imu.gyro_y, imu.gyro_z,
-			  imu.temp_c);
+			  imu.temp_c,
+			  payload.vision_valid,
+			  payload.line_error,
+			  payload.obstacle_flag,
+			  payload.vision_confidence);
 
       HAL_Delay(200);
   }

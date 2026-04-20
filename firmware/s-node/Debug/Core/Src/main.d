@@ -44,7 +44,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/usart.h ../USB_HOST/App/usb_host.h ../Core/Inc/gpio.h \
  ../Core/Inc/fmc.h ../Core/Inc/payload.h ../Core/Inc/imu.h \
  ../Core/Inc/gps.h ../Core/Inc/usart.h ../Core/Inc/gps.h \
- ../Core/Inc/frame.h ../Core/Inc/hash.h ../Core/Inc/imu.h
+ ../Core/Inc/frame.h ../Core/Inc/hash.h ../Core/Inc/imu.h \
+ ../Core/Inc/vision.h ../Core/Inc/payload.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
@@ -105,3 +106,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/frame.h:
 ../Core/Inc/hash.h:
 ../Core/Inc/imu.h:
+../Core/Inc/vision.h:
+../Core/Inc/payload.h:

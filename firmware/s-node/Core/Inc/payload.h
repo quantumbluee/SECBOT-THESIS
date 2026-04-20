@@ -5,6 +5,13 @@
 #include "imu.h"
 #include "gps.h"
 
+typedef struct {
+    uint8_t valid;
+    int16_t line_error;
+    uint8_t obstacle_flag;
+    uint8_t confidence;
+} vision_data_t;
+
 #pragma pack(push, 1)
 typedef struct {
     uint32_t timestamp_ms;
@@ -35,6 +42,10 @@ typedef struct {
 #pragma pack(pop)
 
 void payload_fill_dummy(s_node_payload_t *p);
-void payload_fill_from_sensors(s_node_payload_t *p, const gps_fix_t *gps, const imu_data_t *imu);
+
+void payload_fill_from_sensors(s_node_payload_t *p,
+                               const gps_fix_t *gps,
+                               const imu_data_t *imu,
+                               const vision_data_t *vision);
 
 #endif
