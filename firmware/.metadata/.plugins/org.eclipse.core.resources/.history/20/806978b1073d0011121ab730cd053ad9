@@ -19,9 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "usb_host.h"
-#include <stdio.h>
-#include <string.h>
-#include "anode_control.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -182,14 +180,6 @@ int main(void)
   {
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
-    if (anode_read_line(&huart2, line, sizeof(line), 100) ==0){
-    	if (anode_parse_cmd(line, &cmd) == 0){
-    		motors_apply(&cmd);
-    		printf("CMD ok: seq=%lu L=%d R=%d\r\n", cmd.seq, cmd.left_speed, cmd.right_speed);
-    	}else{
-    		printf("CMD parse fail: %s\r\n", line);
-    	}
-    }
 
     /* USER CODE BEGIN 3 */
   }

@@ -19,9 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "usb_host.h"
-#include <stdio.h>
-#include <string.h>
-#include "anode_control.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -169,11 +167,7 @@ int main(void)
   MX_USART6_UART_Init();
   MX_USB_HOST_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htimX, TIM_CHANNEL_Y);
-  HAL_TIM_PWM_Start(&htimZ, TIM_CHANNEL_W);
 
-  char line[64];
-  motor_cmd_t cmd = {0};
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -182,14 +176,6 @@ int main(void)
   {
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
-    if (anode_read_line(&huart2, line, sizeof(line), 100) ==0){
-    	if (anode_parse_cmd(line, &cmd) == 0){
-    		motors_apply(&cmd);
-    		printf("CMD ok: seq=%lu L=%d R=%d\r\n", cmd.seq, cmd.left_speed, cmd.right_speed);
-    	}else{
-    		printf("CMD parse fail: %s\r\n", line);
-    	}
-    }
 
     /* USER CODE BEGIN 3 */
   }
