@@ -19,9 +19,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "usb_host.h"
+#include "anode_control.h"
 #include <stdio.h>
 #include <string.h>
-#include "anode_control.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -169,29 +169,50 @@ int main(void)
   MX_USART6_UART_Init();
   MX_USB_HOST_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htimX, TIM_CHANNEL_Y);
-  HAL_TIM_PWM_Start(&htimZ, TIM_CHANNEL_W);
+  HAL_TIM_PWM_Start(&htim9, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim9, TIM_CHANNEL_2);
 
-  char line[64];
+  char rx_buf[64];
   motor_cmd_t cmd = {0};
   /* USER CODE END 2 */
 
   /* Infinite loop */
+  char msg[] = "A-NODE HELLO\r\n";
+  HAL_UART_Transmit(&huart4, (uint8_t*)msg, strlen(msg), 100);
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
-    /* USER CODE END WHILE */
-    MX_USB_HOST_Process();
-    if (anode_read_line(&huart2, line, sizeof(line), 100) ==0){
-    	if (anode_parse_cmd(line, &cmd) == 0){
-    		motors_apply(&cmd);
-    		printf("CMD ok: seq=%lu L=%d R=%d\r\n", cmd.seq, cmd.left_speed, cmd.right_speed);
-    	}else{
-    		printf("CMD parse fail: %s\r\n", line);
-    	}
-    }
+      char rx_buf[64];
 
-    /* USER CODE BEGIN 3 */
+      if (anode_read_line(&huart4, rx_buf, sizeof(rx_buf), 5000) == 0)
+      {
+          char msg[128];
+
+          sprintf(msg, "RX LINE: [%s]\r\n", rx_buf);
+          HAL_UART_Transmit(&huart4, (uint8_t*)msg, strlen(msg), 100);
+
+          motor_cmd_t cmd = {0};
+
+          if (anode_parse_cmd(rx_buf, &cmd) == 0)
+          {
+              sprintf(msg, "CMD OK: L=%d R=%d\r\n",
+                      cmd.left_speed, cmd.right_speed);
+              HAL_UART_Transmit(&huart4, (uint8_t*)msg, strlen(msg), 100);
+
+              motors_apply(&cmd);
+          }
+          else
+          {
+              char err[] = "PARSE ERROR\r\n";
+              HAL_UART_Transmit(&huart4, (uint8_t*)err, strlen(err), 100);
+          }
+      }
+      else
+      {
+          char wait[] = "WAITING...\r\n";
+          HAL_UART_Transmit(&huart4, (uint8_t*)wait, strlen(wait), 100);
+      }
   }
   /* USER CODE END 3 */
 }
@@ -935,7 +956,7 @@ static void MX_TIM9_Init(void)
   htim9.Instance = TIM9;
   htim9.Init.Prescaler = 0;
   htim9.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim9.Init.Period = 65535;
+  htim9.Init.Period = 255;
   htim9.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim9.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim9) != HAL_OK)
@@ -1291,10 +1312,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOF_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOE, ARD_D7_GPIO_Pin|ARD_D8_GPIO_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOE, IN1_Pin|IN2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOG, WIFI_RST_Pin|WIFI_GPIO_0_Pin|PMOD_GPIO_0_Pin|USB_OTGFS_PPWR_EN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOG, WIFI_RST_Pin|WIFI_GPIO_0_Pin|IN4_Pin|USB_OTGFS_PPWR_EN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOD, WIFI_GPIO_2_Pin|WIFI_CH_PD_Pin, GPIO_PIN_RESET);
@@ -1312,21 +1333,21 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, USB_OTG_FS_ID_Pin|SYS_LD_USER1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOH, PMOD_GPIO_1_Pin|ARD_D4_GPIO_Pin|USB_OTGHS_PPWR_EN_Pin|CTP_RST_Pin
+  HAL_GPIO_WritePin(GPIOH, PMOD_GPIO_1_Pin|IN3_Pin|USB_OTGHS_PPWR_EN_Pin|CTP_RST_Pin
                           |LCD_RST_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, USB_OTG_HS_ID_Pin|SYS_LD_USER2_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : ARD_D7_GPIO_Pin ARD_D8_GPIO_Pin */
-  GPIO_InitStruct.Pin = ARD_D7_GPIO_Pin|ARD_D8_GPIO_Pin;
+  /*Configure GPIO pins : IN1_Pin IN2_Pin */
+  GPIO_InitStruct.Pin = IN1_Pin|IN2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : WIFI_RST_Pin WIFI_GPIO_0_Pin PMOD_GPIO_0_Pin USB_OTGFS_PPWR_EN_Pin */
-  GPIO_InitStruct.Pin = WIFI_RST_Pin|WIFI_GPIO_0_Pin|PMOD_GPIO_0_Pin|USB_OTGFS_PPWR_EN_Pin;
+  /*Configure GPIO pins : WIFI_RST_Pin WIFI_GPIO_0_Pin IN4_Pin USB_OTGFS_PPWR_EN_Pin */
+  GPIO_InitStruct.Pin = WIFI_RST_Pin|WIFI_GPIO_0_Pin|IN4_Pin|USB_OTGFS_PPWR_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -1365,9 +1386,9 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(CTP_INT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PMOD_SEL_0_Pin PMOD_GPIO_1_Pin ARD_D4_GPIO_Pin USB_OTGHS_PPWR_EN_Pin
+  /*Configure GPIO pins : PMOD_SEL_0_Pin PMOD_GPIO_1_Pin IN3_Pin USB_OTGHS_PPWR_EN_Pin
                            CTP_RST_Pin LCD_RST_Pin */
-  GPIO_InitStruct.Pin = PMOD_SEL_0_Pin|PMOD_GPIO_1_Pin|ARD_D4_GPIO_Pin|USB_OTGHS_PPWR_EN_Pin
+  GPIO_InitStruct.Pin = PMOD_SEL_0_Pin|PMOD_GPIO_1_Pin|IN3_Pin|USB_OTGHS_PPWR_EN_Pin
                           |CTP_RST_Pin|LCD_RST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;

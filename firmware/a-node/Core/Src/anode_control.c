@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+extern TIM_HandleTypeDef htim9;
+
 static int clamp_pwm(int x)
 {
     if (x > 255) return 255;
@@ -85,7 +87,7 @@ void motor_left_set(int speed)
         HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, GPIO_PIN_RESET);
     }
 
-    __HAL_TIM_SET_COMPARE(&htimX, TIM_CHANNEL_Y, pwm);  // replace htimX/channel
+    __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
 }
 
 void motor_right_set(int speed)
@@ -103,7 +105,7 @@ void motor_right_set(int speed)
         HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, GPIO_PIN_RESET);
     }
 
-    __HAL_TIM_SET_COMPARE(&htimZ, TIM_CHANNEL_W, pwm);  // replace htimZ/channel
+    __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, pwm);  // replace htimZ/channel
 }
 
 void motors_apply(const motor_cmd_t *cmd)

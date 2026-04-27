@@ -1,0 +1,6 @@
+../Core/Src/anode_control.c:16:12:clamp_pwm	16	static
+../Core/Src/anode_control.c:23:5:anode_read_line	40	static
+../Core/Src/anode_control.c:52:5:anode_parse_cmd	48	static
+../Core/Src/anode_control.c:75:6:motor_left_set	24	static
+../Core/Src/anode_control.c:93:6:motor_right_set	24	static
+../Core/Src/anode_control.c:111:6:motors_apply	16	static

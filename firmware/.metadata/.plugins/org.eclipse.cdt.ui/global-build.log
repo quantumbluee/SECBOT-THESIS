@@ -1300,3 +1300,962 @@ arm-none-eabi-size  s-node.elf
  137404	    540	   9540	 147484	  2401c	s-node.elf
 Finished building: default.size.stdout
  
+18:05:23 **** Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_hal_msp.d" -MT"Core/Src/stm32f7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f7xx_hal_timebase_tim.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_hal_timebase_tim.d" -MT"Core/Src/stm32f7xx_hal_timebase_tim.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_hal_timebase_tim.o"
+arm-none-eabi-gcc "../Core/Src/stm32f7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_it.d" -MT"Core/Src/stm32f7xx_it.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f7xx.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f7xx.d" -MT"Core/Src/system_stm32f7xx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f7xx.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:172:22: error: 'htimX' undeclared (first use in this function); did you mean 'htim9'?
+  172 |   HAL_TIM_PWM_Start(&htimX, TIM_CHANNEL_Y);
+      |                      ^~~~~
+      |                      htim9
+../Core/Src/main.c:172:22: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:172:29: error: 'TIM_CHANNEL_Y' undeclared (first use in this function); did you mean 'TIM_CHANNEL_1'?
+  172 |   HAL_TIM_PWM_Start(&htimX, TIM_CHANNEL_Y);
+      |                             ^~~~~~~~~~~~~
+      |                             TIM_CHANNEL_1
+../Core/Src/main.c:173:22: error: 'htimZ' undeclared (first use in this function); did you mean 'htim9'?
+  173 |   HAL_TIM_PWM_Start(&htimZ, TIM_CHANNEL_W);
+      |                      ^~~~~
+      |                      htim9
+../Core/Src/main.c:173:29: error: 'TIM_CHANNEL_W' undeclared (first use in this function); did you mean 'TIM_CHANNEL_1'?
+  173 |   HAL_TIM_PWM_Start(&htimZ, TIM_CHANNEL_W);
+      |                             ^~~~~~~~~~~~~
+      |                             TIM_CHANNEL_1
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'line' [-Wunused-variable]
+  175 |   char line[64];
+      |        ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:204:1: error: expected identifier or '(' before '}' token
+  204 | }
+      | ^
+../Core/Src/anode_control.c: In function 'motor_left_set':
+../Core/Src/anode_control.c:78:27: error: 'IN1_GPIO_Port' undeclared (first use in this function); did you mean 'NC1_GPIO_Port'?
+   78 |         HAL_GPIO_WritePin(IN1_GPIO_Port, IN1_Pin, GPIO_PIN_SET);
+      |                           ^~~~~~~~~~~~~
+      |                           NC1_GPIO_Port
+../Core/Src/anode_control.c:78:27: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/anode_control.c:78:42: error: 'IN1_Pin' undeclared (first use in this function); did you mean 'NC1_Pin'?
+   78 |         HAL_GPIO_WritePin(IN1_GPIO_Port, IN1_Pin, GPIO_PIN_SET);
+      |                                          ^~~~~~~
+      |                                          NC1_Pin
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/anode_control.c:79:27: error: 'IN2_GPIO_Port' undeclared (first use in this function); did you mean 'NC1_GPIO_Port'?
+   79 |         HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, GPIO_PIN_RESET);
+      |                           ^~~~~~~~~~~~~
+      |                           NC1_GPIO_Port
+../Core/Src/anode_control.c:79:42: error: 'IN2_Pin' undeclared (first use in this function)
+   79 |         HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, GPIO_PIN_RESET);
+      |                                          ^~~~~~~
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:411,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/anode_control.h:4,
+                 from ../Core/Src/anode_control.c:9:
+../Core/Src/anode_control.c:88:35: error: 'TIM_CHANNEL_Y' undeclared (first use in this function); did you mean 'TIM_CHANNEL_1'?
+   88 |     __HAL_TIM_SET_COMPARE(&htimX, TIM_CHANNEL_Y, pwm);  // replace htimX/channel
+      |                                   ^~~~~~~~~~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:6: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |      ^~~~~~~~~~~
+../Core/Src/anode_control.c:88:28: error: 'htimX' undeclared (first use in this function)
+   88 |     __HAL_TIM_SET_COMPARE(&htimX, TIM_CHANNEL_Y, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c: In function 'motor_right_set':
+../Core/Src/anode_control.c:96:27: error: 'IN3_GPIO_Port' undeclared (first use in this function); did you mean 'NC1_GPIO_Port'?
+   96 |         HAL_GPIO_WritePin(IN3_GPIO_Port, IN3_Pin, GPIO_PIN_SET);
+      |                           ^~~~~~~~~~~~~
+      |                           NC1_GPIO_Port
+../Core/Src/anode_control.c:96:42: error: 'IN3_Pin' undeclared (first use in this function)
+   96 |         HAL_GPIO_WritePin(IN3_GPIO_Port, IN3_Pin, GPIO_PIN_SET);
+      |                                          ^~~~~~~
+../Core/Src/anode_control.c:97:27: error: 'IN4_GPIO_Port' undeclared (first use in this function); did you mean 'NC1_GPIO_Port'?
+   97 |         HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, GPIO_PIN_RESET);
+      |                           ^~~~~~~~~~~~~
+      |                           NC1_GPIO_Port
+../Core/Src/anode_control.c:97:42: error: 'IN4_Pin' undeclared (first use in this function)
+   97 |         HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, GPIO_PIN_RESET);
+      |                                          ^~~~~~~
+../Core/Src/anode_control.c:106:35: error: 'TIM_CHANNEL_W' undeclared (first use in this function); did you mean 'TIM_CHANNEL_1'?
+  106 |     __HAL_TIM_SET_COMPARE(&htimZ, TIM_CHANNEL_W, pwm);  // replace htimZ/channel
+      |                                   ^~~~~~~~~~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:6: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |      ^~~~~~~~~~~
+../Core/Src/anode_control.c:106:28: error: 'htimZ' undeclared (first use in this function)
+  106 |     __HAL_TIM_SET_COMPARE(&htimZ, TIM_CHANNEL_W, pwm);  // replace htimZ/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/anode_control.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:13:35 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'line' [-Wunused-variable]
+  175 |   char line[64];
+      |        ^~~~
+../Core/Src/anode_control.c: In function 'motor_left_set':
+../Core/Src/anode_control.c:78:27: error: 'IN1_GPIO_Port' undeclared (first use in this function); did you mean 'NC1_GPIO_Port'?
+   78 |         HAL_GPIO_WritePin(IN1_GPIO_Port, IN1_Pin, GPIO_PIN_SET);
+      |                           ^~~~~~~~~~~~~
+      |                           NC1_GPIO_Port
+../Core/Src/anode_control.c:78:27: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/anode_control.c:78:42: error: 'IN1_Pin' undeclared (first use in this function); did you mean 'NC1_Pin'?
+   78 |         HAL_GPIO_WritePin(IN1_GPIO_Port, IN1_Pin, GPIO_PIN_SET);
+      |                                          ^~~~~~~
+      |                                          NC1_Pin
+../Core/Src/anode_control.c:79:27: error: 'IN2_GPIO_Port' undeclared (first use in this function); did you mean 'NC1_GPIO_Port'?
+   79 |         HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, GPIO_PIN_RESET);
+      |                           ^~~~~~~~~~~~~
+      |                           NC1_GPIO_Port
+../Core/Src/anode_control.c:79:42: error: 'IN2_Pin' undeclared (first use in this function)
+   79 |         HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, GPIO_PIN_RESET);
+      |                                          ^~~~~~~
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:411,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/anode_control.h:4,
+                 from ../Core/Src/anode_control.c:9:
+../Core/Src/anode_control.c:88:28: error: 'htim9' undeclared (first use in this function)
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c: In function 'motor_right_set':
+../Core/Src/anode_control.c:96:27: error: 'IN3_GPIO_Port' undeclared (first use in this function); did you mean 'NC1_GPIO_Port'?
+   96 |         HAL_GPIO_WritePin(IN3_GPIO_Port, IN3_Pin, GPIO_PIN_SET);
+      |                           ^~~~~~~~~~~~~
+      |                           NC1_GPIO_Port
+../Core/Src/anode_control.c:96:42: error: 'IN3_Pin' undeclared (first use in this function)
+   96 |         HAL_GPIO_WritePin(IN3_GPIO_Port, IN3_Pin, GPIO_PIN_SET);
+      |                                          ^~~~~~~
+../Core/Src/anode_control.c:97:27: error: 'IN4_GPIO_Port' undeclared (first use in this function); did you mean 'NC1_GPIO_Port'?
+   97 |         HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, GPIO_PIN_RESET);
+      |                           ^~~~~~~~~~~~~
+      |                           NC1_GPIO_Port
+../Core/Src/anode_control.c:97:42: error: 'IN4_Pin' undeclared (first use in this function)
+   97 |         HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, GPIO_PIN_RESET);
+      |                                          ^~~~~~~
+../Core/Src/anode_control.c:106:28: error: 'htim9' undeclared (first use in this function)
+  106 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, pwm);  // replace htimZ/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/anode_control.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:23:17 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../USB_HOST/Target/usbh_conf.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_HOST/Target/usbh_conf.d" -MT"USB_HOST/Target/usbh_conf.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/Target/usbh_conf.o"
+arm-none-eabi-gcc "../USB_HOST/App/usb_host.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_HOST/App/usb_host.d" -MT"USB_HOST/App/usb_host.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/App/usb_host.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_scsi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_scsi.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_scsi.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_scsi.o"
+arm-none-eabi-gcc "../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.d" -MT"Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.o"
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_hal_msp.d" -MT"Core/Src/stm32f7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_it.d" -MT"Core/Src/stm32f7xx_it.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'line' [-Wunused-variable]
+  175 |   char line[64];
+      |        ^~~~
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:1300:28: error: 'ARD_D7_GPIO_Pin' undeclared (first use in this function); did you mean 'ARD_D2_GPIO_Pin'?
+ 1300 |   HAL_GPIO_WritePin(GPIOE, ARD_D7_GPIO_Pin|ARD_D8_GPIO_Pin, GPIO_PIN_RESET);
+      |                            ^~~~~~~~~~~~~~~
+      |                            ARD_D2_GPIO_Pin
+../Core/Src/main.c:1300:28: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:411,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/anode_control.h:4,
+                 from ../Core/Src/anode_control.c:9:
+../Core/Src/anode_control.c: In function 'motor_left_set':
+../Core/Src/anode_control.c:88:28: error: 'htim9' undeclared (first use in this function)
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c:88:28: note: each undeclared identifier is reported only once for each function it appears in
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c: In function 'motor_right_set':
+../Core/Src/anode_control.c:106:28: error: 'htim9' undeclared (first use in this function)
+  106 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, pwm);  // replace htimZ/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/main.c:1300:44: error: 'ARD_D8_GPIO_Pin' undeclared (first use in this function); did you mean 'ARD_D2_GPIO_Pin'?
+ 1300 |   HAL_GPIO_WritePin(GPIOE, ARD_D7_GPIO_Pin|ARD_D8_GPIO_Pin, GPIO_PIN_RESET);
+      |                                            ^~~~~~~~~~~~~~~
+      |                                            ARD_D2_GPIO_Pin
+../Core/Src/main.c:1303:57: error: 'PMOD_GPIO_0_Pin' undeclared (first use in this function); did you mean 'PMOD_GPIO_1_Pin'?
+ 1303 |   HAL_GPIO_WritePin(GPIOG, WIFI_RST_Pin|WIFI_GPIO_0_Pin|PMOD_GPIO_0_Pin|USB_OTGFS_PPWR_EN_Pin, GPIO_PIN_RESET);
+      |                                                         ^~~~~~~~~~~~~~~
+      |                                                         PMOD_GPIO_1_Pin
+make: *** [Core/Src/subdir.mk:40: Core/Src/anode_control.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c:1321:44: error: 'ARD_D4_GPIO_Pin' undeclared (first use in this function); did you mean 'ARD_D2_GPIO_Pin'?
+ 1321 |   HAL_GPIO_WritePin(GPIOH, PMOD_GPIO_1_Pin|ARD_D4_GPIO_Pin|USB_OTGHS_PPWR_EN_Pin|CTP_RST_Pin
+      |                                            ^~~~~~~~~~~~~~~
+      |                                            ARD_D2_GPIO_Pin
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:28:51 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:174:3: error: unknown type name 'motor_cmd_t'
+  174 |   motor_cmd_t cmd = {0};
+      |   ^~~~~~~~~~~
+../Core/Src/main.c:180:3: error: unknown type name 'motor_cmd_t'
+  180 |   motor_cmd_t cmd;
+      |   ^~~~~~~~~~~
+../Core/Src/main.c:180:15: error: redeclaration of 'cmd' with no linkage
+  180 |   motor_cmd_t cmd;
+      |               ^~~
+../Core/Src/main.c:174:15: note: previous definition of 'cmd' with type 'int'
+  174 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:185:11: warning: implicit declaration of function 'anode_read_line' [-Wimplicit-function-declaration]
+  185 |       if (anode_read_line(&huartX, rx_buf, sizeof(rx_buf), 100) == 0)
+      |           ^~~~~~~~~~~~~~~
+../Core/Src/main.c:185:28: error: 'huartX' undeclared (first use in this function); did you mean 'huart6'?
+  185 |       if (anode_read_line(&huartX, rx_buf, sizeof(rx_buf), 100) == 0)
+      |                            ^~~~~~
+      |                            huart6
+../Core/Src/main.c:185:28: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:411,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/anode_control.h:4,
+                 from ../Core/Src/anode_control.c:9:
+../Core/Src/anode_control.c: In function 'motor_left_set':
+../Core/Src/anode_control.c:88:28: error: 'htim9' undeclared (first use in this function)
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c:88:28: note: each undeclared identifier is reported only once for each function it appears in
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c: In function 'motor_right_set':
+../Core/Src/anode_control.c:106:28: error: 'htim9' undeclared (first use in this function)
+  106 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, pwm);  // replace htimZ/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/main.c:188:15: warning: implicit declaration of function 'anode_parse_cmd' [-Wimplicit-function-declaration]
+  188 |           if (anode_parse_cmd(rx_buf, &cmd) == 0)
+      |               ^~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/anode_control.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c:191:15: warning: implicit declaration of function 'motors_apply' [-Wimplicit-function-declaration]
+  191 |               motors_apply(&cmd);
+      |               ^~~~~~~~~~~~
+../Core/Src/main.c:173:8: warning: unused variable 'line' [-Wunused-variable]
+  173 |   char line[64];
+      |        ^~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:33:39 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:15: error: redeclaration of 'cmd' with no linkage
+  181 |   motor_cmd_t cmd;
+      |               ^~~
+../Core/Src/main.c:175:15: note: previous definition of 'cmd' with type 'motor_cmd_t'
+  175 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:186:28: error: 'huartX' undeclared (first use in this function); did you mean 'huart6'?
+  186 |       if (anode_read_line(&huartX, rx_buf, sizeof(rx_buf), 100) == 0)
+      |                            ^~~~~~
+      |                            huart6
+../Core/Src/main.c:186:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:174:8: warning: unused variable 'line' [-Wunused-variable]
+  174 |   char line[64];
+      |        ^~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:411,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/anode_control.h:4,
+                 from ../Core/Src/anode_control.c:9:
+../Core/Src/anode_control.c: In function 'motor_left_set':
+../Core/Src/anode_control.c:88:28: error: 'htim9' undeclared (first use in this function)
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c:88:28: note: each undeclared identifier is reported only once for each function it appears in
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c: In function 'motor_right_set':
+../Core/Src/anode_control.c:106:28: error: 'htim9' undeclared (first use in this function)
+  106 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, pwm);  // replace htimZ/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/anode_control.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:34:22 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:15: error: redeclaration of 'cmd' with no linkage
+  181 |   motor_cmd_t cmd;
+      |               ^~~
+../Core/Src/main.c:175:15: note: previous definition of 'cmd' with type 'motor_cmd_t'
+  175 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:186:28: error: 'huartX' undeclared (first use in this function); did you mean 'huart6'?
+  186 |       if (anode_read_line(&huartX, rx_buf, sizeof(rx_buf), 100) == 0)
+      |                            ^~~~~~
+      |                            huart6
+../Core/Src/main.c:186:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:174:8: warning: unused variable 'line' [-Wunused-variable]
+  174 |   char line[64];
+      |        ^~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:411,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/anode_control.h:4,
+                 from ../Core/Src/anode_control.c:9:
+../Core/Src/anode_control.c: In function 'motor_left_set':
+../Core/Src/anode_control.c:88:28: error: 'htim9' undeclared (first use in this function)
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c:88:28: note: each undeclared identifier is reported only once for each function it appears in
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c: In function 'motor_right_set':
+../Core/Src/anode_control.c:106:28: error: 'htim9' undeclared (first use in this function)
+  106 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, pwm);  // replace htimZ/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/anode_control.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:35:52 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:184:28: error: 'huartX' undeclared (first use in this function); did you mean 'huart6'?
+  184 |       if (anode_read_line(&huartX, rx_buf, sizeof(rx_buf), 100) == 0)
+      |                            ^~~~~~
+      |                            huart6
+../Core/Src/main.c:184:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:411,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/anode_control.h:4,
+                 from ../Core/Src/anode_control.c:9:
+../Core/Src/anode_control.c: In function 'motor_left_set':
+../Core/Src/anode_control.c:88:28: error: 'htim9' undeclared (first use in this function)
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c:88:28: note: each undeclared identifier is reported only once for each function it appears in
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c: In function 'motor_right_set':
+../Core/Src/anode_control.c:106:28: error: 'htim9' undeclared (first use in this function)
+  106 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, pwm);  // replace htimZ/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/anode_control.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:39:22 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:184:28: error: 'huart3' undeclared (first use in this function); did you mean 'huart6'?
+  184 |       if (anode_read_line(&huart3, rx_buf, sizeof(rx_buf), 100) == 0)
+      |                            ^~~~~~
+      |                            huart6
+../Core/Src/main.c:184:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:411,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/anode_control.h:4,
+                 from ../Core/Src/anode_control.c:9:
+../Core/Src/anode_control.c: In function 'motor_left_set':
+../Core/Src/anode_control.c:88:28: error: 'htim9' undeclared (first use in this function)
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c:88:28: note: each undeclared identifier is reported only once for each function it appears in
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c: In function 'motor_right_set':
+../Core/Src/anode_control.c:106:28: error: 'htim9' undeclared (first use in this function)
+  106 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, pwm);  // replace htimZ/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/anode_control.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:39:36 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:411,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/anode_control.h:4,
+                 from ../Core/Src/anode_control.c:9:
+../Core/Src/anode_control.c: In function 'motor_left_set':
+../Core/Src/anode_control.c:88:28: error: 'htim9' undeclared (first use in this function)
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c:88:28: note: each undeclared identifier is reported only once for each function it appears in
+   88 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, pwm);  // replace htimX/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/anode_control.c: In function 'motor_right_set':
+../Core/Src/anode_control.c:106:28: error: 'htim9' undeclared (first use in this function)
+  106 |     __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_2, pwm);  // replace htimZ/channel
+      |                            ^~~~~
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:1546:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1546 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/anode_control.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:41:34 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/anode_control.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/anode_control.d" -MT"Core/Src/anode_control.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/anode_control.o"
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  63244	    156	   8580	  71980	  1192c	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+18:43:20 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:15: warning: unused variable 'cmd' [-Wunused-variable]
+  175 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:174:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  174 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  59392	    156	   8580	  68128	  10a20	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+18:47:01 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:4: error: 'f' undeclared (first use in this function)
+  190 |   }f
+      |    ^
+../Core/Src/main.c:190:4: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:190:5: error: expected ';' before '}' token
+  190 |   }f
+      |     ^
+      |     ;
+  191 |   /* USER CODE END 3 */
+  192 | }
+      | ~    
+../Core/Src/main.c:175:15: warning: unused variable 'cmd' [-Wunused-variable]
+  175 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:174:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  174 |   char rx_buf[64];
+      |        ^~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:47:22 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:15: warning: unused variable 'cmd' [-Wunused-variable]
+  175 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:174:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  174 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  59392	    156	   8580	  68128	  10a20	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+18:50:46 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-size  a-node.elf 
+   text	   data	    bss	    dec	    hex	filename
+  59392	    156	   8580	  68128	  10a20	a-node.elf
+Finished building: default.size.stdout
+ 
+22:07:16 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-size  a-node.elf 
+   text	   data	    bss	    dec	    hex	filename
+  59392	    156	   8580	  68128	  10a20	a-node.elf
+Finished building: default.size.stdout
+ 
+22:55:00 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:180:45: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  180 |   HAL_UART_Transmit(&huart4, (uint8_t*)msg, strlen(msg), 100);
+      |                                             ^~~~~~
+../Core/Src/main.c:23:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   22 | #include "anode_control.h"
+  +++ |+#include <string.h>
+   23 | 
+../Core/Src/main.c:180:45: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
+  180 |   HAL_UART_Transmit(&huart4, (uint8_t*)msg, strlen(msg), 100);
+      |                                             ^~~~~~
+../Core/Src/main.c:180:45: note: include '<string.h>' or provide a declaration of 'strlen'
+../Core/Src/main.c:193:19: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  193 |                   sprintf(msg, "CMD OK: L=%d R=%d\r\n", cmd.left_speed, cmd.right_speed);
+      |                   ^~~~~~~
+../Core/Src/main.c:23:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   22 | #include "anode_control.h"
+  +++ |+#include <stdio.h>
+   23 | 
+../Core/Src/main.c:193:19: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  193 |                   sprintf(msg, "CMD OK: L=%d R=%d\r\n", cmd.left_speed, cmd.right_speed);
+      |                   ^~~~~~~
+../Core/Src/main.c:193:19: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:195:19: error: too few arguments to function 'HAL_UART_Transmit'
+  195 |                   HAL_UART_Transmit();
+      |                   ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:415,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1557:19: note: declared here
+ 1557 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:57:01 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:180:45: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  180 |   HAL_UART_Transmit(&huart4, (uint8_t*)msg, strlen(msg), 100);
+      |                                             ^~~~~~
+../Core/Src/main.c:24:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   23 | #include <stdio.h>
+  +++ |+#include <string.h>
+   24 | /* Private includes ----------------------------------------------------------*/
+../Core/Src/main.c:180:45: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
+  180 |   HAL_UART_Transmit(&huart4, (uint8_t*)msg, strlen(msg), 100);
+      |                                             ^~~~~~
+../Core/Src/main.c:180:45: note: include '<string.h>' or provide a declaration of 'strlen'
+../Core/Src/main.c:195:19: error: too few arguments to function 'HAL_UART_Transmit'
+  195 |                   HAL_UART_Transmit();
+      |                   ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:415,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1557:19: note: declared here
+ 1557 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:57:29 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:196:19: error: too few arguments to function 'HAL_UART_Transmit'
+  196 |                   HAL_UART_Transmit();
+      |                   ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32f7xx_hal_conf.h:415,
+                 from ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:1557:19: note: declared here
+ 1557 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                   ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:03:44 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  65300	    156	   8580	  74036	  12134	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+09:54:06 **** Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  59792	    156	   8580	  68528	  10bb0	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:00:13 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  59632	    156	   8580	  68368	  10b10	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:01:02 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  59644	    156	   8580	  68380	  10b1c	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:01:41 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  59792	    156	   8580	  68528	  10bb0	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:03:33 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  59792	    156	   8580	  68528	  10bb0	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:18:06 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  65360	    156	   8580	  74096	  12170	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:22:07 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  65360	    156	   8580	  74096	  12170	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:24:50 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  59868	    156	   8580	  68604	  10bfc	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:30:11 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  65360	    156	   8580	  74096	  12170	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:33:33 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  65500	    156	   8580	  74236	  121fc	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+10:36:15 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  65496	    156	   8580	  74232	  121f8	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+13:19:40 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  65500	    156	   8580	  74236	  121fc	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+13:21:08 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F723xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:15: warning: unused variable 'cmd' [-Wunused-variable]
+  176 |   motor_cmd_t cmd = {0};
+      |               ^~~
+../Core/Src/main.c:175:8: warning: unused variable 'rx_buf' [-Wunused-variable]
+  175 |   char rx_buf[64];
+      |        ^~~~~~
+arm-none-eabi-gcc -o "a-node.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\urvih\SECBOT\firmware\a-node\STM32F723IEKX_FLASH.ld" --specs=nosys.specs -Wl,-Map="a-node.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: a-node.elf
+ 
+arm-none-eabi-size  a-node.elf 
+arm-none-eabi-objdump -h -S a-node.elf  > "a-node.list"
+   text	   data	    bss	    dec	    hex	filename
+  65496	    156	   8580	  74232	  121f8	a-node.elf
+Finished building: default.size.stdout
+ 
+Finished building: a-node.list
+ 
+16:18:48 **** Incremental Build of configuration Debug for project a-node ****
+make -j8 all 
+arm-none-eabi-size  a-node.elf 
+   text	   data	    bss	    dec	    hex	filename
+  65496	    156	   8580	  74232	  121f8	a-node.elf
+Finished building: default.size.stdout
+ 
+12:04:02 **** Build of configuration Debug for project s-node ****
+make -j8 all 
+arm-none-eabi-size  s-node.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 137404	    540	   9540	 147484	  2401c	s-node.elf
+Finished building: default.size.stdout
+ 
