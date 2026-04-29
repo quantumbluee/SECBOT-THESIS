@@ -1,0 +1,57 @@
+Altium Designer Pick and Place Locations
+C:\Users\Public\Documents\Altium\Power_Board_Motor\Project Outputs for Free Documents\Pick Place\Pick Place for PowerBoardMotor.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       20/04/26
+Time:       01:22
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+"Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
+"J1","XT60PW-M","TopLayer","XT60PWM","859.748","864.448","90","Socket; DC supply; XT60; male; PIN: 2; on PCBs; THT; Colour: yellow"
+"J8","1729128","TopLayer","PHOE-1729128-2_V","1091.492","332.028","0","PCB Terminal Block, 13.5 A, 400 V, 2-Pin THD, RoHS, Bulk"
+"U2","TPS40303DRCR","TopLayer","DRC0010J_V","1087.140","2102.554","270","3 to 20 V Wide Input Synchronous Buck Controller for High Power Density, High Efficiency, 300 kHz, 90 % Duty Cycle, -40 to 125 degC, 10-pin SON (DRC), Green (RoHS & no Sb/Br)"
+"R12","1.87k","TopLayer","RESC1005X40X25LL05T05","1013.038","2319.970","90",""
+"R11","1.37k","TopLayer","RESC1005X40X25LL05T05","967.584","2319.972","270",""
+"R10","4.02k","TopLayer","RESC1005X40X25ML05T05","1125.853","1993.998","180",""
+"R9","100k","TopLayer","FP-CRCW0402-e3-IPC_C","1132.356","2242.061","180","RES Thick Film, 100kO, 1%, 0.063W, 100ppm/°C, 0402"
+"R8","10k","TopLayer","FP-CRCW0402-C-e3-IPC_C","1221.826","2311.317","90","RES 10K OHM 1% 1/16W 0402"
+"R7","383","TopLayer","RESC1608X55X25LL10T15","1285.738","2320.626","90",""
+"Q4","CSD17577Q3AT","TopLayer","FP-DNH0008A-MFG","1116.086","1685.510","90","MOSFET N-CH 30V 35A 8VSON"
+"Q3","CSD17578Q3A","TopLayer","FP-DNH0008A-MFG","837.736","1712.724","270","MOSFET N-CH 30V 35A 8VSON"
+"C18","2.2uF","TopLayer","CAPC2013X135X50ML10T20","1230.698","2010.736","90",""
+"C17","560pF","TopLayer","FP-GRM155-0_05-IPC_A","1033.997","2247.452","180","Chip Multilayer Ceramic Capacitors for General Purpose, 0402, 560pF, C0G, 30ppm/°C, 5%, 50V"
+"C16","15nF","TopLayer","CAPC1005X55X25LL05T10","1055.222","2318.002","270",""
+"C15","1uF","TopLayer","FP-C1005-050-0_05-IPC_B","1221.667","2144.208","270","Multilayer Ceramic Capacitors 1µF ±10% 25V X5R SMD 0402"
+"C13","2.7nF","TopLayer","CAPC1005X55X25NL05T10","1249.910","2252.910","0",""
+"C12","100uF","TopLayer","FP-C3216-160-0_3-IPC_C","1240.231","993.070","180","Multilayer Ceramic Capacitors 100uF ±20% 6.3V X5R SMD 1206"
+"C11","100nF","TopLayer","FP-GRM15-MFG","984.647","2015.599","90","CAP CER 0.1UF 16V X7R 0402"
+"C10","3.3nF","TopLayer","FP-GRM033-0_03-MFG","939.750","2166.245","270","Chip Multilayer Ceramic Capacitors for General Purpose, 0201, 3300pF, X7R, 15%, 10%, 10V"
+"U4","L78M05ABV","TopLayer","TO220","2416.964","1393.698","270","Precision 500mA Regulator, 5V, 3-Pin TO-220"
+"U3","L298N","TopLayer","STM-FM-15","3159.128","1864.822","0","Dual Full-Bridge Driver, 4.8 to 46 V, -40 to 150 degC, 15-Pin FM (MW 15L), RoHS, Tube"
+"R14","1k","TopLayer","FP-RNCF0603-MFG","2675.866","1604.060","270","RES 1K OHM, 0.01%, 2 PPM, 0.1W,"
+"P1","CONTROL","TopLayer","SMTC-TSW-104-08-X-S","3126.220","1216.649","0","0.025" SQ Post Header, Through-hole, Vertical, -55 to 125 degC, 2.54 mm Pitch, 4-Pin, Male, RoHS"
+"L2","8.2uH 18A","TopLayer","FP-IHLP-6767GZ-FP_3_825x1-MFG","1604.862","1430.184","270","Commercial Inductors, High Saturation Series 8.2uH 18A 10.66mO 20%"
+"J9","282836-4","TopLayer","FP-282836-4-MFG","1875.270","2688.834","180","282836-4 Connector, Terminal Block; Wire Receptacle; 4 Pos.; 16-30 AWG; 0.197 in. CL; Sid"
+"J7","1729128","TopLayer","PHOE-1729128-2_V","1191.480","2688.834","180","PCB Terminal Block, 13.5 A, 400 V, 2-Pin THD, RoHS, Bulk"
+"J6","POWER","TopLayer","691101710003","1659.098","333.994","0","101 Series 5MM Pitch Straight, Pcb Terminal Block, Through Hole, 3 Way"
+"J5","12V Jumper","TopLayer","FP-M50-3530242-MFG","2320.948","1740.594","0","CONN HEADER VERT 2POS 1.27MM"
+"J4","ENB","TopLayer","FP-M50-3530242-MFG","2099.298","1698.304","270","CONN HEADER VERT 2POS 1.27MM"
+"J3","282836-4","TopLayer","FP-282836-4-MFG","2454.144","346.620","0","282836-4 Connector, Terminal Block; Wire Receptacle; 4 Pos.; 16-30 AWG; 0.197 in. CL; Sid"
+"J2","ENA","TopLayer","FP-M50-3530242-MFG","2304.412","1899.930","90","CONN HEADER VERT 2POS 1.27MM"
+"DS1","HSMR-C190","TopLayer","AVAG-HSMX-C190_V","2842.226","1613.901","270","LED Uni-Color Blue, 78 mW, 20 mA, -40 to 85 degC, 2-Pin SMD, RoHS, Tape and Reel"
+"D8","1N4007","TopLayer","FP-1N4007-MFG","2361.030","829.376","90","Rectifier diode 1000 V 1 A DO-41, ,"
+"D7","1N4007","TopLayer","FP-1N4007-MFG","2538.748","829.376","90","Rectifier diode 1000 V 1 A DO-41, ,"
+"D6","1N4007","TopLayer","FP-1N4007-MFG","2733.666","821.557","90","Rectifier diode 1000 V 1 A DO-41, ,"
+"D5","1N4007","TopLayer","FP-1N4007-MFG","2911.384","829.376","90","Rectifier diode 1000 V 1 A DO-41, ,"
+"D4","1N4007","TopLayer","FP-1N4007-MFG","2980.344","2613.267","90","Rectifier diode 1000 V 1 A DO-41, ,"
+"D3","1N4007","TopLayer","FP-1N4007-MFG","2780.344","2613.267","90","Rectifier diode 1000 V 1 A DO-41, ,"
+"D2","1N4007","TopLayer","FP-1N4007-MFG","2580.344","2613.267","90","Rectifier diode 1000 V 1 A DO-41, ,"
+"D1","1N4007","TopLayer","FP-1N4007-MFG","2380.344","2613.267","90","Rectifier diode 1000 V 1 A DO-41, ,"
+"C21","220uF 35V","TopLayer","FP-EEHA-G-MFG","2042.002","2233.096","0","Conductive Polymer Hybrid Aluminum Electrolytic Capacitors 220uF ±20% 35V RADIAL TH 10x9.5mm"
+"C20","220uF 35V","TopLayer","FP-EEHA-G-MFG","2048.516","798.514","0","Conductive Polymer Hybrid Aluminum Electrolytic Capacitors 220uF ±20% 35V RADIAL TH 10x9.5mm"
+"C19","220uF 35V","TopLayer","FP-EEHA-G-MFG","2761.974","1936.151","90","Conductive Polymer Hybrid Aluminum Electrolytic Capacitors 220uF ±20% 35V RADIAL TH 10x9.5mm"
+"C14","82uF","TopLayer","FP-OS-CON-SMT-E12-MFG","907.218","1403.973","180","Conductive Polymer Aluminum Solid Capacitors (OS-CON) 82uF ±20% 35V"
