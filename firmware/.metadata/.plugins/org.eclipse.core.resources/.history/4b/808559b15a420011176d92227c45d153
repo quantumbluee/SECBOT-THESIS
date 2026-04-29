@@ -218,7 +218,7 @@ int main(void)
           HAL_Delay(500);
           continue;
       }
-      HAL_UART_Transmit(&huart4, (uint8_t*)"PING\r\n", 6, HAL_MAX_DELAY);
+
       HAL_UART_Transmit(&huart4, frame_buf, frame_len, HAL_MAX_DELAY);
       printf("Sent frame to Pi: len = %d |"
     		  "Ax=%.3f Ay=%.3f Az=%.3f |"

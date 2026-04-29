@@ -1,0 +1,39 @@
+2026-04-27 07:26:55,514 [INFO] WebApp:194 - Connection lost
+2026-04-27 07:27:01,610 [INFO] WebApp:191 - Connection restablished
+2026-04-27 07:27:13,310 [INFO] WebApp:194 - Connection lost
+2026-04-27 07:27:13,473 [INFO] WebApp:191 - Connection restablished
+2026-04-27 07:27:13,840 [INFO] WebApp:194 - Connection lost
+2026-04-27 07:27:13,989 [INFO] WebApp:191 - Connection restablished
+2026-04-27 09:42:57,461 [INFO] WebApp:194 - Connection lost
+2026-04-27 09:43:05,306 [INFO] WebApp:191 - Connection restablished
+2026-04-27 09:43:07,209 [INFO] WebApp:194 - Connection lost
+2026-04-27 09:43:07,435 [INFO] WebApp:191 - Connection restablished
+2026-04-27 11:10:00,048 [INFO] WebApp:194 - Connection lost
+2026-04-27 11:10:02,672 [INFO] WebApp:191 - Connection restablished
+2026-04-27 11:10:06,188 [INFO] WebApp:194 - Connection lost
+2026-04-27 11:10:06,783 [INFO] WebApp:191 - Connection restablished
+2026-04-27 12:29:07,934 [INFO] WebApp:194 - Connection lost
+2026-04-27 12:29:15,844 [INFO] WebApp:191 - Connection restablished
+2026-04-27 12:29:17,689 [INFO] WebApp:194 - Connection lost
+2026-04-27 12:29:17,997 [INFO] WebApp:191 - Connection restablished
+2026-04-27 13:04:50,917 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-27 13:07:07,927 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-27 13:49:22,162 [INFO] WebApp:194 - Connection lost
+2026-04-27 13:49:27,178 [INFO] WebApp:191 - Connection restablished
+2026-04-27 13:49:31,646 [INFO] WebApp:194 - Connection lost
+2026-04-27 13:49:31,791 [INFO] WebApp:191 - Connection restablished
+2026-04-27 15:43:32,667 [INFO] WebApp:194 - Connection lost
+2026-04-27 15:44:19,649 [INFO] WebApp:191 - Connection restablished
+2026-04-27 16:47:40,372 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-27 16:47:46,757 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-27 16:47:50,864 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-27 16:47:58,781 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-27 16:48:07,181 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2026-04-27 17:06:03,070 [INFO] WebApp:194 - Connection lost
+2026-04-27 17:49:43,016 [INFO] WebApp:191 - Connection restablished
+2026-04-27 17:49:43,157 [INFO] WebApp:194 - Connection lost
+2026-04-27 17:49:43,304 [INFO] WebApp:191 - Connection restablished
+2026-04-27 17:49:46,038 [INFO] WebApp:194 - Connection lost
+2026-04-27 17:49:46,150 [INFO] WebApp:191 - Connection restablished
+2026-04-27 21:35:48,912 [INFO] WebApp:194 - Connection lost
+2026-04-27 21:36:12,534 [INFO] WebApp:191 - Connection restablished
